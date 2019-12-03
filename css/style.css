@@ -62,7 +62,10 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #fff; }
+  background-color: #fff;
+  overflow:scroll;
+  -webkit-overflow-scrolling: touch;
+}
 
 [tabindex="-1"]:focus {
   outline: 0 !important; }
@@ -4478,7 +4481,8 @@ button.close {
   top: -9999px;
   width: 50px;
   height: 50px;
-  overflow: scroll; }
+  overflow: scroll; 
+  -webkit-overflow-scrolling: touch;}
 
 @media (min-width: 576px) {
   .modal-dialog {
@@ -6183,7 +6187,7 @@ button.bg-dark:focus {
 
 .mb-5,
 .my-5 {
-  margin-bottom: 3rem !important; }
+  margin-bottom: 0rem !important; }
 
 .ml-5,
 .mx-5 {
@@ -7344,7 +7348,7 @@ header {
   left: 0;
   width: 100%;
   z-index: 5; }
-  @media (max-width: 1199.98px) {
+  @media (max-width: 3000px) {
     header {
       top: 0; } }
   header .navbar-brand {
@@ -7364,10 +7368,10 @@ header {
     background: none !important;
     position: relative;
     font-family: "Montserrat", sans-serif; }
-    @media (max-width: 1199.98px) {
+    @media (max-width: 3000px) {
       header .navbar {
         background: black !important;
-        padding-top: .5rem;
+        padding-top: 0rem;
         padding-bottom: .5rem; } }
     header .navbar .nav-link {
       padding: 1.7rem 1rem;
@@ -7375,7 +7379,7 @@ header {
       font-size: 12px;
       text-transform: uppercase;
       letter-spacing: .2em; }
-      @media (max-width: 1199.98px) {
+      @media (max-width: 3000px) {
         header .navbar .nav-link {
           padding: .5rem 0rem; } }
       header .navbar .nav-link.active {
@@ -7658,10 +7662,11 @@ header {
         color: white;
         background-color: #fd5f00;
         -webkit-box-shadow: 0.5em 0 0 #fd5f00,-0.5em 0 0 #fd5f00;
-        box-shadow: 0.5em 0 0 #fd5f00,-0.5em 0 0 #fd5f00; }
+        box-shadow: 0.5em 0 0 #fd5f00,-0.5em 0 0 #fd5f00;margin-top: 100px; }
       @media (max-width: 991.98px) {
         .slider-item .slider-text h1 {
-          font-size: 40px; } }
+          font-size: 40px; 
+		  margin-top: 100px;} }
     .slider-item .slider-text p {
       font-size: 20px;
       line-height: 1.5;
@@ -7692,7 +7697,7 @@ header {
     display: inline-block; }
 
 .section {
-  padding: 7em 0; }
+  padding: 2em 0; }
 
 .section-subscribe {
   padding: 2em 0; }
