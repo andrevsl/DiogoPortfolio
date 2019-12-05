@@ -7464,7 +7464,7 @@ header {
   background-position: center center; }
   @media (max-width: 991.98px) {
     .half .image {
-      height: 350px; } }
+      height: 80vh; } }
 
 .section-heading h2 {
   font-size: 50px; }
@@ -7615,8 +7615,8 @@ header {
 .inner-page .slider-item {
   position: relative;
   height: calc(50vh - 117px);
-  min-height: 550px; }
-  .inner-page .slider-item .slider-text {
+  min-height: 700px; }
+  .inner-page .slider-item .slid	er-text {
     color: #fff;
     height: calc(50vh - 117px);
     min-height: 550px; }
@@ -7625,7 +7625,7 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  height: calc(100vh);
+  height: calc(100vh-100px);
   min-height: 700px;
   position: relative; }
   .slider-item:before {
