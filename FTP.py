@@ -6,7 +6,8 @@ username = 'admdiogosouza'
 password = '!jb1&#e!asdaerr$$#'
 myFTP = ftplib.FTP(server)
 myFTP.login(username, password)
-myPath = r'C:\Project\Social\Charts Templates\industrial'
+myFTP.cwd('/public_html')
+myPath = r'C:\Project\Social\Charts Templates\industrial\css'
 
 def uploadThis(path):
     files = os.listdir(path)
@@ -22,4 +23,4 @@ def uploadThis(path):
             uploadThis(path + r'\{}'.format(f))
     myFTP.cwd('..')
     os.chdir('..')
-uploadThis(myPath) # now call the recursive function           
+uploadThis(myPath) # now call the recursive function        

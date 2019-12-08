@@ -61,9 +61,13 @@
 	});
 
   $('.nonloop-block-11').owlCarousel({
+      animateOut: 'fadeOut',
+      animateIn: 'fadeIn',
+	  autoplayHoverPause: true,
+	  loop:true,
+	  autoplay: true,
       center: false,
       items: 1,
-      loop: false,
       stagePadding: 20,
       margin:50,
       nav: true,
