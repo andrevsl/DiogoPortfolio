@@ -9,22 +9,28 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { BlogpcastComponent } from './blogpcast/blogpcast.component';
 import { DataplatformComponent } from './dataplatform/dataplatform.component';
 import { SecurityComponent } from './security/security.component';
-
+import { FooterComponent } from './footer/footer.component';
+import { TestemonialsComponent } from './shared/testemonials/testemonials.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
+    HeaderComponent,
     AboutComponent,
     PortfolioComponent,
     BlogpcastComponent,
     DataplatformComponent,
-    SecurityComponent
+    SecurityComponent,
+    FooterComponent,
+    TestemonialsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,7 +1,7 @@
 <header role="banner">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand " href="index.html">Diogo Souza</a>
+        <a [routerLink]="['']" class="navbar-brand " href="index.html">Diogo Souza</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -12,10 +12,10 @@
               <a class="nav-link active" href="index.html">Apresentação</a>
             </li> -->
             <li class="nav-item">
-              <a class="nav-link" href="about.html">Sobre</a>
+              <a routerLinkactive="active" class="nav-link" [routerLink]="['about']">Sobre</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="projects.html">Portfólio</a>
+              <a routerLinkactive class="nav-link" [routerLink]="['portfolio']">Portfólio</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="services.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Serviços</a>
