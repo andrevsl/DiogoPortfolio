@@ -12,6 +12,7 @@ import { SecurityComponent } from './security/security.component';
 import { FooterComponent } from './footer/footer.component';
 import { TestemonialsComponent } from './shared/testemonials/testemonials.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
   imports: [
     BrowserModule,
     AppRoutingModule,
+    NgbModule,
     BrowserAnimationsModule
   ],
   providers: [],
