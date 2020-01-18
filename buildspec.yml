@@ -12,7 +12,7 @@ phases:
         - npm run build:ci
     post_build:
       commands:
-        - aws s3 rm s3://${diogosouza} --recursive
+        - aws s3 rm s3://diogosouza --recursive
         - echo S3 bucket cleared
-        - aws s3 cp dist s3://${diogosouza} --recursive
+        - aws s3 cp dist s3://diogosouza --recursive
         - echo Build completed on `date`
