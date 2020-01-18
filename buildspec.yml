@@ -9,7 +9,7 @@ phases:
         commands:
             - npm install -y npm@latest
             - npm install -g @angular/cli
-            - rm package-lock.json  
+            - rm package-lock.json
     pre_build:
       commands:
         - npm install
@@ -20,5 +20,5 @@ phases:
       commands:
         - aws s3 rm s3://${S3_BUCKET} --recursive
         - echo S3 bucket is cleared.
-        - aws s3 cp dist/{Your app name} s3://${S3_BUCKET} --recursive
+        - aws s3 cp dist s3://${S3_BUCKET} --recursive
         - echo Build completed on `date``
