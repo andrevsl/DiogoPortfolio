@@ -1,9 +1,15 @@
 version: 0.2
-
+env:
+    variables:
+        S3_BUCKET: "diogosouza"
 phases:
     install:
         runtime-versions:
-          nodejs : 10
+            nodejs: 10
+        commands:
+            - npm install -y npm@latest
+            - npm install -g @angular/cli
+            - rm package-lock.json  
     pre_build:
       commands:
         - npm install
@@ -12,7 +18,7 @@ phases:
         - npm run build:ci
     post_build:
       commands:
-        - aws s3 rm s3://diogosouza --recursive
-        - echo S3 bucket cleared
-        - aws s3 cp dist s3://diogosouza --recursive
-        - echo Build completed on `date`
+        - aws s3 rm s3://${S3_BUCKET} --recursive
+        - echo S3 bucket is cleared.
+        - aws s3 cp dist/{Your app name} s3://${S3_BUCKET} --recursive
+        - echo Build completed on `date``
