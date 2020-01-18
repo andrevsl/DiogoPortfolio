@@ -25,21 +25,14 @@
             ],
             "styles": [
               "src/assets/css/style.css",
-            
               "src/assets/fonts/fontawesome/css/font-awesome.min.css",
-              "src/assets/fonts/ionicons/css/ionicons.min.css",
-              "src/assets/css/jquery.fancybox.min.css",
-              "src/assets/css/animate.css"
+              "src/assets/fonts/ionicons/css/ionicons.min.css"
+
+
 
             ],
             "scripts": [
 
-              "src/assets/js/jquery-3.2.1.min.js",
-              "src/assets/js/popper.min.js",
-              "src/assets/js/bootstrap.min.js",
-              "src/assets/js/owl.carousel.min.js",
-              "src/assets/js/jquery.waypoints.min.js",
-              "src/assets/js/jquery.fancybox.min.js"
             ]
           },
           "configurations": {
