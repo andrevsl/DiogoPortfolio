@@ -13,6 +13,8 @@ import { FooterComponent } from './footer/footer.component';
 import { TestemonialsComponent } from './shared/testemonials/testemonials.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ServicesComponent } from './services/services.component';
+import { ContactsComponent } from './contacts/contacts.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     DataplatformComponent,
     SecurityComponent,
     FooterComponent,
-    TestemonialsComponent
+    TestemonialsComponent,
+    ServicesComponent,
+    ContactsComponent
   ],
   imports: [
     BrowserModule,

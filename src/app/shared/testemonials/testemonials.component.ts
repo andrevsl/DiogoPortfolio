@@ -11,7 +11,8 @@ export class TestemonialsComponent implements OnInit {
   constructor(config:NgbCarouselConfig) {
   config.interval = 5000;
   config.wrap = false;
-  config.keyboard = false;
+  config.showNavigationIndicators=true;
+  config.showNavigationArrows = false;
   config.pauseOnHover = false; }
 
   ngOnInit() {

@@ -11,6 +11,8 @@ export const routes:Routes=[
   {path:'about',component:AboutComponent},
   {path:'portfolio',component:PortfolioComponent},
   {path:'blogpcast',component:BlogpcastComponent},
+  {path:'services',component:BlogpcastComponent},
+  {path:'contacts',component:BlogpcastComponent},
   {path:'dataplatform',component: DataplatformComponent}
 
 ]

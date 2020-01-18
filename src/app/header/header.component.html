@@ -15,21 +15,25 @@
               <a routerLinkactive="active" class="nav-link" [routerLink]="['about']">Sobre</a>
             </li>
             <li class="nav-item">
-              <a routerLinkactive class="nav-link" [routerLink]="['portfolio']">Portfólio</a>
+              <a routerLinkactive="active" class="nav-link" [routerLink]="['portfolio']">Portfólio</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="services.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Serviços</a>
+              <a class="nav-link dropdown-toggle" class="nav-link" [routerLink]="['services']"
+               id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Serviços</a>
               <div class="dropdown-menu" aria-labelledby="dropdown04">
-                <a class="dropdown-item" href="services.html">Mentoria Executiva</a>
-                <a class="dropdown-item" href="services.html">Coaching Profissional</a>
-                <a class="dropdown-item" href="services.html">Gestão de Inovação</a>
+                <a class="dropdown-item" [routerLink]="['services']" >Mentoria Executiva</a>
+                <a class="dropdown-item" [routerLink]="['services']">Coaching Profissional</a>
+                <a class="dropdown-item" [routerLink]="['services']">Gestão de Inovação</a>
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="blog.html">Blog&Podcast</a>
+              <a class="nav-link" routerLinkactive="active" [routerLink]="['blogpcast']">Blog&Podcast</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contatos</a>
+              <a class="nav-link" routerLinkactive="active" [routerLink]="['dataplatform']">Data Vision</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLinkactive="active" [routerLink]="['contacts']">Contatos</a>
             </li>
           </ul>
 
