@@ -1,33 +1,33 @@
 <header role="banner">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
-        <a [routerLink]="['']" class="navbar-brand " href="index.html">Diogo Souza</a>
+        <a routerLinkactive="active" [routerLink]="['']" class="navbar-brand">Diogo Souza</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarsExample05">
+        <div  class="collapse navbar-collapse" id="navbarsExample05">
           <ul class="navbar-nav pl-md-5 ml-auto">
-<!--               <li class="nav-item">
-              <a class="nav-link active" href="index.html">Apresentação</a>
-            </li> -->
             <li class="nav-item">
-              <a routerLinkactive="active" class="nav-link" [routerLink]="['about']">Sobre</a>
+              <a ngbDropdownrouterLinkactive="active" class="nav-link" [routerLink]="['about']">Sobre</a>
             </li>
             <li class="nav-item">
               <a routerLinkactive="active" class="nav-link" [routerLink]="['portfolio']">Portfólio</a>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" class="nav-link" [routerLink]="['services']"
+            <li ngbDropdown class="nav-item dropdown">
+              <a ngbDropdownToggle class="nav-link dropdown-toggle" class="nav-link" routerLinkactive="active" [routerLink]="['services']"
                id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Serviços</a>
-              <div class="dropdown-menu" aria-labelledby="dropdown04">
-                <a class="dropdown-item" [routerLink]="['services']" >Mentoria Executiva</a>
-                <a class="dropdown-item" [routerLink]="['services']">Coaching Profissional</a>
-                <a class="dropdown-item" [routerLink]="['services']">Gestão de Inovação</a>
+              <div ngbDropdownMenu  class="dropdown-menu" aria-labelledby="dropdown04">
+                <a ngbDropdownItem class="dropdown-item" routerLinkactive="active" [routerLink]="['services']">Mentoria Executiva</a>
+                <a ngbDropdownItem class="dropdown-item" routerLinkactive="active" [routerLink]="['services']">Bussiness Inteligence</a>
+                <a ngbDropdownItem class="dropdown-item" routerLinkactive="active" [routerLink]="['Portal']">Portal FollowUp</a>
               </div>
             </li>
             <li class="nav-item">
               <a class="nav-link" routerLinkactive="active" [routerLink]="['blogpcast']">Blog&Podcast</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLinkactive="active" [routerLink]="['portal']">Portal</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" routerLinkactive="active" [routerLink]="['dataplatform']">Data Vision</a>

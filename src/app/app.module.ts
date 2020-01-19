@@ -15,6 +15,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ServicesComponent } from './services/services.component';
 import { ContactsComponent } from './contacts/contacts.component';
+import { PortalComponent } from './portal/portal.component';
+import { CoursesComponent } from './portal/courses/courses.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { ContactsComponent } from './contacts/contacts.component';
     FooterComponent,
     TestemonialsComponent,
     ServicesComponent,
-    ContactsComponent
+    ContactsComponent,
+    PortalComponent,
+    CoursesComponent
   ],
   imports: [
     BrowserModule,
