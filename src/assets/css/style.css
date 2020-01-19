@@ -4989,6 +4989,13 @@ button.bg-danger:focus {
 .bg-light {
   background-color: #f8f9fa !important; }
 
+.bg-light2 {
+    background-color: #ADD8E6 !important;
+    height: 400px;
+    padding-right:0;
+    padding-left:0;
+    }
+
 a.bg-light:hover, a.bg-light:focus,
 button.bg-light:hover,
 button.bg-light:focus {
@@ -8330,6 +8337,61 @@ header {
   border-radius: 2px;
   margin-bottom: 15px;
 }
+.place-info-box-icon {
+  border-top-left-radius: 2px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 2px;
+  display: block;
+  float: left;
+  /*height: 120px;*/
+  width: 120px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.2);
+}
+.place-info-box-icon > img {
+  max-width: 100%;
+  /*border-right: 1px solid rgba(0, 0, 0, 0.1);*/
+}
+.place-info-box-content {
+  padding: 5px 10px;
+  margin-left: 120px;
+  color:black
+}
+
+.place-info-box-detail {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.place-info-box-text {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  width: 80%;
+  float: left;
+  color:black;
+}
+
+.place-info-box-star {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 10px;
+  width: 20%;
+  float: right;
+  color:green
+}
 .textpa{
   color:#FFF;
   font-size:1.35rem;
@@ -8387,9 +8449,18 @@ header {
 }
 @media(max-width:991.98px){
   .text3{
-    padding-left:5%;
-    padding-right:5%;
+    padding-left:3%;
+    padding-right:3%;
     height: auto;
     width:100%;
   }
+}
+
+.imgtest{
+  width:340px;
+  height:340px;
+}
+
+.padtest{
+  padding-left:15px;
 }
