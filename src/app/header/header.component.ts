@@ -9,6 +9,12 @@ export class HeaderComponent implements OnInit {
   public isMenuCollapsed = true;
   constructor() { }
 
+  isChosenMenu(){
+    if(this.isMenuCollapsed===false){
+      this.isMenuCollapsed=true
+    }
+    }
+
   ngOnInit() {
   }
 

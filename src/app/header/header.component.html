@@ -1,7 +1,7 @@
 <header role="banner">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
-        <a routerLinkactive="active" [routerLink]="['']" class="navbar-brand">Diogo Souza</a>
+        <a routerLinkactive="active" (click)="isChosenMenu()" [routerLink]="['']" class="navbar-brand">Diogo Souza</a>
         <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -9,31 +9,31 @@
         <div  [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse" id="navbarsExample05">
           <ul class="navbar-nav pl-md-5 ml-auto">
             <li class="nav-item">
-              <a ngbDropdownrouterLinkactive="active" class="nav-link" [routerLink]="['about']">Sobre</a>
+              <a ngbDropdownrouterLinkactive="active" (click)="isChosenMenu()" class="nav-link" [routerLink]="['about']">Sobre</a>
             </li>
             <li class="nav-item">
-              <a routerLinkactive="active" class="nav-link" [routerLink]="['portfolio']">Portfólio</a>
+              <a routerLinkactive="active" class="nav-link" (click)="isChosenMenu()" [routerLink]="['portfolio']">Portfólio</a>
             </li>
             <li ngbDropdown class="nav-item dropdown">
               <a ngbDropdownToggle class="nav-link dropdown-toggle" class="nav-link" routerLinkactive="active" [routerLink]="['services']"
                id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Serviços</a>
               <div ngbDropdownMenu  class="dropdown-menu" aria-labelledby="dropdown04">
-                <a ngbDropdownItem class="dropdown-item" routerLinkactive="active" [routerLink]="['services']">Mentoria Executiva</a>
-                <a ngbDropdownItem class="dropdown-item" routerLinkactive="active" [routerLink]="['services']">Bussiness Inteligence</a>
-                <a ngbDropdownItem class="dropdown-item" routerLinkactive="active" [routerLink]="['portal']">Portal FollowUp</a>
+                <a ngbDropdownItem class="dropdown-item" (click)="isChosenMenu()" routerLinkactive="active" [routerLink]="['services']" fragment="Mentoria">Mentoria Executiva</a>
+                <a ngbDropdownItem class="dropdown-item" (click)="isChosenMenu()" routerLinkactive="active" [routerLink]="['services']">Bussiness Inteligence</a>
+                <a ngbDropdownItem class="dropdown-item" (click)="isChosenMenu()" routerLinkactive="active" [routerLink]="['portal']">Portal FollowUp</a>
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" routerLinkactive="active" [routerLink]="['blogpcast']">Blog&Podcast</a>
+              <a class="nav-link" (click)="isChosenMenu()" routerLinkactive="active" [routerLink]="['blogpcast']">Blog&Podcast</a>
             </li>
             <!--<li class="nav-item">
               <a class="nav-link" routerLinkactive="active" [routerLink]="['portal']">Portal</a>
             </li>-->
             <li class="nav-item">
-              <a class="nav-link" routerLinkactive="active" [routerLink]="['dataplatform']">Data Vision</a>
+              <a class="nav-link" (click)="isChosenMenu()" routerLinkactive="active" [routerLink]="['dataplatform']">Data Vision</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" routerLinkactive="active" [routerLink]="['contacts']">Contatos</a>
+              <a class="nav-link" (click)="isChosenMenu()" routerLinkactive="active" [routerLink]="['contacts']">Contatos</a>
             </li>
           </ul>
 

@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/Diogo",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

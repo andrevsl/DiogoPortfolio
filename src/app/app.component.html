@@ -1,12 +1,13 @@
 <div class="wrapper">
   <!-- Header Inicio-->
-  <ds-header></ds-header>
+  <ds-header *ngIf="!dataRoute"></ds-header>
+
 
   <!-- Content -->
   <router-outlet></router-outlet>
 
   <!--Testemonials-->
-  <ds-testemonials></ds-testemonials>
+  <ds-testemonials *ngIf="!dataRoute"></ds-testemonials>
   <!--Footer -->
-  <ds-footer></ds-footer>
+  <ds-footer  *ngIf="!dataRoute"></ds-footer>
 </div>
