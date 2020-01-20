@@ -17,6 +17,19 @@ import { ServicesComponent } from './services/services.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { PortalComponent } from './portal/portal.component';
 import { CoursesComponent } from './portal/courses/courses.component';
+import { LoginComponent } from './security/login/login.component';
+import { FirebaseauthComponent } from './security/firebaseauth/firebaseauth.component';
+//import { AngularFireModule } from "@angular/fire";
+//import { AngularFireAuth } from "@angular/fire/auth";
+
+export const firebaseConfig = {
+  apiKey: "----",
+  authDomain: "-----n",
+  databaseURL: "-----",
+  projectId: "------",
+  storageBucket: "----",
+  messagingSenderId: "-----"
+};
 
 @NgModule({
   declarations: [
@@ -34,13 +47,16 @@ import { CoursesComponent } from './portal/courses/courses.component';
     ServicesComponent,
     ContactsComponent,
     PortalComponent,
-    CoursesComponent
+    CoursesComponent,
+    LoginComponent,
+    FirebaseauthComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     BrowserAnimationsModule
+  //  AngularFireModule.initializeApp(firebaseConfig)
   ],
   providers: [],
   bootstrap: [AppComponent]

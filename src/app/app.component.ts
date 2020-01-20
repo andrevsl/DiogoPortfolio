@@ -10,6 +10,7 @@ import {Location} from '@angular/common'
 export class AppComponent implements OnInit {
   title = 'Diogo';
   dataRoute:boolean
+  firebaseauth:boolean=false
 
   constructor(private router:Router,
               private location:Location,
@@ -34,10 +35,11 @@ export class AppComponent implements OnInit {
        })
      }
 
-checkRouteDataP(){
-
-
-  return true
+isFirebaseBaas(){
+ if(this.firebaseauth===true){
+   return true
+  }
+ return false
 }
 
 

@@ -8,7 +8,8 @@ import {DataplatformComponent} from './dataplatform/dataplatform.component'
 import {ServicesComponent} from './services/services.component'
 import {ContactsComponent} from './contacts/contacts.component'
 import { PortalComponent } from './portal/portal.component';
-
+import { LoginComponent } from './security/login/login.component';
+import {LocationStrategy,HashLocationStrategy } from '@angular/common'
 
 export const routes:Routes=[
   {path:'',component:HomeComponent},
@@ -18,12 +19,14 @@ export const routes:Routes=[
   {path:'services',component:ServicesComponent},
   {path:'contacts',component:ContactsComponent},
   {path:'portal',component:PortalComponent},
-  {path:'dataplatform',component: DataplatformComponent}
+  {path:'dataplatform',component: DataplatformComponent},
+  {path:'login',component: LoginComponent}
 
 ]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes,{anchorScrolling:'enabled'})],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers:[{provide:LocationStrategy,useClass: HashLocationStrategy}]
 })
 export class AppRoutingModule { }

@@ -8,6 +8,8 @@
 
   <!--Testemonials-->
   <ds-testemonials *ngIf="!dataRoute"></ds-testemonials>
+
+  <ds-firebaseauth *ngIf="isFirebaseBaas()"></ds-firebaseauth>
   <!--Footer -->
   <ds-footer  *ngIf="!dataRoute"></ds-footer>
 </div>
