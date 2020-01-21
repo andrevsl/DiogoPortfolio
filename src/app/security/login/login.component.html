@@ -1,27 +1,52 @@
-<!-- <section class="content login-content" style="margin: 10% auto">
-  <div class="login-logo">
-       <b>Portal Consultoria</b> | Login
-  </div>
-  <div class="col-xs-12 col-sm-offset-3 col-sm-6 login-box-body">
-  <p class="login-box-msg">Por favor, efetue o login para continuar</p>
+<!--<button type="button" mdbBtn color="default" rounded="true" data-toggle="modal" data-target="#basicExample"
+    (click)="frame.show()" mdbWavesEffect style="margin-top:150px">Launch Modal</button>-->
 
-  <form [formGroup]="loginForm">
-          <mt-input-container [showTip]="false">
-              <input type="text" formControlName="email" class="form-control" placeholder="Email">
-                  <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-          </mt-input-container>
-          <mt-input-container [showTip]="false">
-                  <input type="password" formControlName="password" class="form-control" placeholder="Password">
-                  <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-          </mt-input-container>
+<div mdbModal #frame="mdbModal" class="modal fade left" id="frameModalTop" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel" >
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="row modal-header text-center" style="margin-bottom:0;padding-bottom:0;">
+        <span class="login-logo loginStyle ">
+  			 <b style="font-weight:700;">PORTAL</b> | Login
+  		  </span>
+        <p class="login-box-msg SubStyle">Por favor, efetue o login para continuar!</p>
 
-      <div class="row">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="frame.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form [formGroup]="validatingForm" class="modal-body mx-3" style="margin-bottom:0;padding-bottom:0">
+        <div class="md-form mb-2">
+          <ds-input-container [showTip]="false">
+          <i  class="fa fa-envelope prefix " style="color: #2bbbad!important;"></i>
+          <input type="email" id="defaultForm-email" formControlName="loginFormModalEmail" class="form-control"
+                 mdbInput mdbValidate>
+          <label class="labelStyle" for="defaultForm-email">Your email</label>
+          </ds-input-container>
+        </div>
 
-              <div class="col-xs-offset-8 col-xs-4">
-              <button (click)="login()" type="submit" [disabled]="loginForm.invalid" class="btn btn-primary btn-block btn-flat">Entrar</button>
+        <div class="md-form ">
+          <ds-input-container [showTip]="false">
+          <i style="font-size:20px!important;color: #2bbbad!important;" class="fa fa-lock prefix " ></i>
+          <input type="password" id="defaultForm-pass" formControlName="loginFormModalPassword" class="form-control"
+                 mdbInput mdbValidate>
+          <label class="labelStyle" for="defaultForm-pass">Your password</label>
+          </ds-input-container>
+        </div>
+
+      </form>
+      <div class="modal-footer d-flex justify-content-center">
+        <button mdbBtn color="default" class="waves-light" mdbWavesEffect>Login</button>
+      </div>
     </div>
-
-    </div>
-  </form>
   </div>
-</section>  -->
+</div>
+
+<!--
+<div class="modal">
+<form class="modal-content" style="padding-top:60px">
+  <h1>Test</h1>
+</form>
+</div>
+
+-->

@@ -19,8 +19,15 @@ import { PortalComponent } from './portal/portal.component';
 import { CoursesComponent } from './portal/courses/courses.component';
 import { LoginComponent } from './security/login/login.component';
 import { FirebaseauthComponent } from './security/firebaseauth/firebaseauth.component';
-//import { AngularFireModule } from "@angular/fire";
-//import { AngularFireAuth } from "@angular/fire/auth";
+import { InputComponent } from './shared/input/input.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AngularFireModule } from "@angular/fire";
+import { AngularFireAuth } from "@angular/fire/auth";
+import { CognitoauthComponent } from './security/cognitoauth/cognitoauth.component';
+import { UserDetailComponent } from './header/user-detail/user-detail.component';
+import { MDBBootstrapModule ,ModalModule, TooltipModule, PopoverModule, ButtonsModule } from 'angular-bootstrap-md'
+import { LoginService } from './security/login/login.service';
+import { SnackbarComponent } from './shared/ModalNotification/snackbar/snackbar.component';
 
 export const firebaseConfig = {
   apiKey: "----",
@@ -49,16 +56,23 @@ export const firebaseConfig = {
     PortalComponent,
     CoursesComponent,
     LoginComponent,
-    FirebaseauthComponent
+    FirebaseauthComponent,
+    InputComponent,
+    CognitoauthComponent,
+    UserDetailComponent,
+    SnackbarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    BrowserAnimationsModule
-  //  AngularFireModule.initializeApp(firebaseConfig)
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MDBBootstrapModule.forRoot(),
+    AngularFireModule.initializeApp(firebaseConfig)
   ],
-  providers: [],
+  providers: [LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

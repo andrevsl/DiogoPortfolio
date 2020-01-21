@@ -12,7 +12,7 @@ export class HeaderComponent implements OnInit {
   isChosenMenu(){
     if(this.isMenuCollapsed===false){
       this.isMenuCollapsed=true
-    }
+      }
     }
 
   ngOnInit() {

@@ -7,7 +7,7 @@
         </button>
 
         <div  [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse" id="navbarsExample05">
-          <ul class="navbar-nav pl-md-5 ml-auto">
+          <ul class="navbar-nav pl-md-5 ml-auto mr-auto">
             <li class="nav-item">
               <a ngbDropdownrouterLinkactive="active" (click)="isChosenMenu()" class="nav-link" [routerLink]="['about']">Sobre</a>
             </li>
@@ -37,12 +37,13 @@
             </li>
           </ul>
 
-          <div class="navbar-nav ml-auto">
+       <ds-user-detail></ds-user-detail>
+      <!--    <div class="navbar-nav ml-auto">
             <form method="post" class="search-form">
               <span class="icon ion ion-search"></span>
               <input type="text" class="form-control" placeholder="Search...">
             </form>
-          </div>
+          </div> -->
 
         </div>
       </div>
