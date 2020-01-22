@@ -28,6 +28,7 @@ import { UserDetailComponent } from './header/user-detail/user-detail.component'
 import { MDBBootstrapModule ,ModalModule, TooltipModule, PopoverModule, ButtonsModule } from 'angular-bootstrap-md'
 import { LoginService } from './security/login/login.service';
 import { SnackbarComponent } from './shared/ModalNotification/snackbar/snackbar.component';
+import { SignupComponent } from './security/signup/signup.component';
 
 export const firebaseConfig = {
   apiKey: "----",
@@ -60,7 +61,8 @@ export const firebaseConfig = {
     InputComponent,
     CognitoauthComponent,
     UserDetailComponent,
-    SnackbarComponent
+    SnackbarComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,

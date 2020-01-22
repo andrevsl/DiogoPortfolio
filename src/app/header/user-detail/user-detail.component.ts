@@ -18,9 +18,8 @@ export class UserDetailComponent implements OnInit {
      return true;
    }
 
-   login(){
+   handleLogin(){
      this.loginService.handleLogin("Login")
-     console.log("login")
    }
 
   isLoggedIn(): boolean {

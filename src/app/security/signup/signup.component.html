@@ -1,0 +1,61 @@
+<div mdbModal #frameS="mdbModal" class="modal fade left" id="SignUpModalTop" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel" >
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="row modal-header text-center" style="margin-bottom:0;padding-bottom:0;">
+        <span class="login-logo loginStyle ">
+  			 <b style="font-weight:700;">PORTAL</b> | Cadastre-se
+  		  </span>
+        <p class="login-box-msg SubStyle">Por favor, insira seus dados!</p>
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="frame.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <form [formGroup]="signUpForm" class="modal-body mx-3" style="margin-bottom:0;padding-bottom:0">
+        <div class="row">
+        <div class="md-form col-xs-6">
+              <ds-input-container [showTip]="false">
+              <input type="email" id="SignUpForm-name" formControlName="name" class="form-control"
+                     mdbInput mdbValidate>
+              <span class="glyphicon glyphicon-lock form-control-feedback" style="color: #2bbbad!important;"></span>
+              <label class="labelStyle" for="defaultForm-email">Nome</label>
+              </ds-input-container>
+        </div>
+        <div class="md-form col-xs-6 ml-2">
+              <ds-input-container [showTip]="false">
+              <input type="email" id="SignUpForm-gname" formControlName="givenname" class="form-control"
+                     mdbInput mdbValidate>
+              <span class="glyphicon glyphicon-lock form-control-feedback" style="color: #2bbbad!important;"></span>
+              <label class="labelStyle" for="defaultForm-email">Nome</label>
+              </ds-input-container>
+        </div>
+      </div>
+
+      <div class="md-form ">
+              <ds-input-container [showTip]="false">
+              <i style="font-size:20px!important;color: #2bbbad!important;" class="fa fa-lock prefix " ></i>
+              <input type="email" id="SignUpForm-email" formControlName="email" class="form-control"
+                     mdbInput mdbValidate>
+              <label class="labelStyle" for="defaultForm-pass">Your password</label>
+              </ds-input-container>
+      </div>
+
+      <div class="md-form ">
+              <ds-input-container [showTip]="false">
+              <i style="font-size:20px!important;color: #2bbbad!important;" class="fa fa-lock prefix " ></i>
+              <input type="password" id="SignUpForm-pass" formControlName="password" class="form-control"
+                     mdbInput mdbValidate>
+              <label class="labelStyle" for="defaultForm-pass">Your password</label>
+              </ds-input-container>
+        </div>
+
+      </form>
+      <div class="modal-footer d-flex justify-content-center">
+        <button mdbBtn (click)="onSignUp()" color="default" class="waves-light"
+           [disabled]="signUpForm.invalid"    mdbWavesEffect>Login</button>
+      </div>
+    </div>
+  </div>
+</div>

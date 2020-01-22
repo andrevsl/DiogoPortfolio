@@ -11,10 +11,9 @@ import { LoginService } from './login.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit,AfterViewInit  {
-  loginForm:FormGroup
-  validatingForm: FormGroup;
+
+  loginForm: FormGroup;
   navigateTo:string;
-  emailPattern=/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
 
   constructor(private loginService:LoginService) { }
   showLogin:boolean=false
@@ -22,26 +21,28 @@ export class LoginComponent implements OnInit,AfterViewInit  {
   @ViewChild('frame',{static:true}) frame: ModalDirective;
 
   ngOnInit() {
-    this.validatingForm = new FormGroup({
-    loginFormModalEmail: new FormControl('', [Validators.required,Validators.email,Validators.pattern(this.emailPattern)]),
-    loginFormModalPassword: new FormControl('', Validators.required)
+    this.loginForm = new FormGroup({
+    Username: new FormControl('', Validators.required),
+    Password: new FormControl('', Validators.required)
   });
   //const loginService=this.injector.get(LoginService)
   this.loginService.loginNotifier.
-                                subscribe(message=>{this.showLogin=true;this.frame.show();console.log("Comp"+message)})
-
-  console.log(this.showLogin)
-
+                                subscribe(message=>{this.showLogin=true;
+                                                   this.frame.show();
+                                                    console.log("Diplayed "+message)
+                                                  })
   }
 
  ngAfterViewInit(){
-    if(!this.showLogin){
-       this.frame.show()
-    }
-
+    if(this.showLogin){
+        this.frame.show()
+        }
  }
 
-
+ onLogin(){
+  this.loginService.onLogin(this.loginForm.value.Username,
+                            this.loginForm.value.Password)
+  }
 
 
 }
