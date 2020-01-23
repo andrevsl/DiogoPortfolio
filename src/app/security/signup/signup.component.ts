@@ -52,7 +52,7 @@ export class SignupComponent implements OnInit,AfterViewInit {
     const response=this.signupService.onSignUp(SignData)
               .subscribe(
                 (data)=>{
-                this.resp=data;console.log(this.resp);
+                this.resp=data;//console.log(this.resp);
                 this.frameS.hide();
                 this.showSignup=false;
                 this.notificationService.notifier.emit({text:"Code",name:name});
