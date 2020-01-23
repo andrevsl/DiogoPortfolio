@@ -43,15 +43,34 @@ export class CognitoAuthService{
 
       cognitoUser.authenticateUser(authenticationDetails, {
         onSuccess: function (result) {
-          const accessToken = result.getAccessToken().getJwtToken();
+              const accessToken = result.getAccessToken().getJwtToken();
+              AWS.config.region='us-east-1';
+          		AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+                			IdentityPoolId: 'us-east-1:78f74cbe-de22-4303-8aab-7ae2d384aeec', // your identity pool id here
+                			Logins: {
+                				// Change the key below according to the specific region your user pool is in.
+                				'cognito-idp.us-east-1.amazonaws.com/us-east-1_5EH4p8vJs': result
+                					.getIdToken()
+                					.getJwtToken(),
+                			},
+          		});
+              ( < AWS.CognitoIdentityCredentials > AWS.config.credentials).refresh(error => {
+                      if (error) {
+                        console.error(error);
+                      } else {
+                        // Instantiate aws sdk service objects now that the credentials have been updated.
+                        // example: var s3 = new AWS.S3();
+                        console.log('Successfully logged!');
+                      }
+              });
           //console.log(result);
           console.log(username+" is logged")
-
           observer.next(result);
           observer.complete();
         },
         onFailure: function(err) {
           //console.log(err);
+          //alert(err.message || JSON.stringify(err));
           observer.error(err);
         },
       });
@@ -59,46 +78,9 @@ export class CognitoAuthService{
 
 
  }
-/*
- onLogin(username:string, password:string){
-
-        const authenticationData = {
-        	Username: username,
-        	Password: password,
-        };
-        const authenticationDetails = new AuthenticationDetails(
-        	authenticationData
-        );
-        const poolData = {
-        	UserPoolId: 'us-east-1_5EH4p8vJs', // Your user pool id here
-        	ClientId: '1r87ubahei96m8t5pvm7at05ec', // Your client id here
-        };
-        const userPool = new CognitoUserPool(poolData);
-        const userData = {
-        	Username: username,
-        	Pool: userPool,
-        };
-        const cognitoUser = new CognitoUser(userData);
-
-        cognitoUser.authenticateUser(authenticationDetails, {
-        	onSuccess: function(result) {
-
-           console.log(username+" is logged")
-           console.log(result)
-
-           return result
-          },
-          onFailure: function(err) {
-              alert(err.message || JSON.stringify(err));
-              return err
-           },
-        })
-
-  }
-*/
 
 
-  signUp(SignData:any):Observable<any>{
+signUp(SignData:any):Observable<any>{
     const attributeList=[]
 
     const dataEmail = {

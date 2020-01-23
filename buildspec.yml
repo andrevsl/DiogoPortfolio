@@ -6,7 +6,7 @@ env:
 phases:
     install:
         runtime-versions:
-            nodejs: 10
+            nodejs: 12
         commands:
             - npm install -y npm@latest
             - npm install -g @angular/cli
