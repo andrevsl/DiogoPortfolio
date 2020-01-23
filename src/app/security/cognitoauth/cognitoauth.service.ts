@@ -43,7 +43,7 @@ export class CognitoAuthService{
 
       cognitoUser.authenticateUser(authenticationDetails, {
         onSuccess: function (result) {
-
+          const accessToken = result.getAccessToken().getJwtToken();
           //console.log(result);
           console.log(username+" is logged")
 
