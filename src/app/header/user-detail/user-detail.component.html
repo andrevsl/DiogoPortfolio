@@ -1,11 +1,10 @@
   <ul class="pl-md-5 navbar-nav">
     <li class="nav-link">
     <span *ngIf="isLoggedIn();else notLoggedIn">
-
-        Olá, Diogo | <a (click)="logout()"><i class="fa fa-sign-in"></i>Sair</a>
+        Olá, Diogo | <a (click)="logout()"><i class="fa fa-user"></i> Sair</a>
     </span>
     <ng-template #notLoggedIn>
-
-      <a (click)="handleLogin()" ><i class="fa fa-sign-in"></i>Entrar</a>
+      <a (click)="handleLogin()" ><i class="fa fa-sign-in"></i>Entrar </a>
+      <a (click)="handleSignUp()" ><i class="fa fa-hand-o-right"></i>Assine</a>
     </ng-template>
     </li>

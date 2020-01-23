@@ -7,10 +7,15 @@ import { Observable, of } from 'rxjs';
 
 export class NotificationService {
 
-notifier=new EventEmitter<string>()
+notifier=new EventEmitter<any>()
 
 notify(message: string){
     this.notifier.emit(message)
+  }
+
+
+notifyLogin(message: any){
+      this.notifier.emit(message)
   }
 
 }

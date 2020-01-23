@@ -1,4 +1,6 @@
-import { Injectable, EventEmitter } from '@angular/core';
+import { Injectable, EventEmitter, Injector } from '@angular/core';
+import { CognitoAuthService } from '../cognitoauth/cognitoauth.service';
+import { Observable } from 'rxjs';
 
 
 @Injectable({
@@ -8,15 +10,17 @@ import { Injectable, EventEmitter } from '@angular/core';
 export class SignupService{
   notifiersignUp=new EventEmitter<string>()
 
-  constructor(){}
+  constructor(private injector:Injector){}
 
 
-  onSignUp(){
-    return false
+  onSignUp(SignData:any):Observable<any>{
+    const cognitoauthService=this.injector.get(CognitoAuthService)
+    ///console.log(SignData)
+    return cognitoauthService.signUp(SignData)
   }
 
   handleSignUp(){
-   this.notifiersignUp.emit("SignUp")
+   this.notifiersignUp.emit("Display SignUp")
    }
 
 

@@ -25,8 +25,7 @@ export const routes:Routes=[
 ]
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes,{anchorScrolling:'enabled'})],
-  exports: [RouterModule],
-  providers:[{provide:LocationStrategy,useClass: HashLocationStrategy}]
+  imports: [RouterModule.forRoot(routes,{anchorScrolling:'enabled',useHash: true})],
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }

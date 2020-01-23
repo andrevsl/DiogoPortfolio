@@ -15,22 +15,17 @@
               <a routerLinkactive="active" class="nav-link" (click)="isChosenMenu()" [routerLink]="['portfolio']">Portfólio</a>
             </li>
             <li ngbDropdown class="nav-item dropdown">
-              <a ngbDropdownToggle class="nav-link dropdown-toggle" class="nav-link" routerLinkactive="active" [routerLink]="['services']"
+              <a ngbDropdownToggle class="nav-link dropdown-toggle" class="nav-link" routerLinkactive="active"  [routerLink]="['services']"
                id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Serviços</a>
               <div ngbDropdownMenu  class="dropdown-menu" aria-labelledby="dropdown04">
                 <a ngbDropdownItem class="dropdown-item" (click)="isChosenMenu()" routerLinkactive="active" [routerLink]="['services']" fragment="Mentoria">Mentoria Executiva</a>
                 <a ngbDropdownItem class="dropdown-item" (click)="isChosenMenu()" routerLinkactive="active" [routerLink]="['services']">Bussiness Inteligence</a>
                 <a ngbDropdownItem class="dropdown-item" (click)="isChosenMenu()" routerLinkactive="active" [routerLink]="['portal']">Portal FollowUp</a>
+                <a ngbDropdownItem class="dropdown-item" (click)="isChosenMenu()" routerLinkactive="active" [routerLink]="['dataplatform']">Data Vision</a>
               </div>
             </li>
             <li class="nav-item">
               <a class="nav-link" (click)="isChosenMenu()" routerLinkactive="active" [routerLink]="['blogpcast']">Blog&Podcast</a>
-            </li>
-            <!--<li class="nav-item">
-              <a class="nav-link" routerLinkactive="active" [routerLink]="['portal']">Portal</a>
-            </li>-->
-            <li class="nav-item">
-              <a class="nav-link" (click)="isChosenMenu()" routerLinkactive="active" [routerLink]="['dataplatform']">Data Vision</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" (click)="isChosenMenu()" routerLinkactive="active" [routerLink]="['contacts']">Contatos</a>

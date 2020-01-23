@@ -11,36 +11,39 @@
   		  </span>
         <p class="login-box-msg SubStyle">Por favor, efetue o login para continuar!</p>
 
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="frame.hide()">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+            (click)="frame.hide()">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <form [formGroup]="loginForm" class="modal-body mx-3" style="margin-bottom:0;padding-bottom:0">
         <div class="md-form mb-2">
           <ds-input-container [showTip]="false">
-          <i  class="fa fa-envelope prefix " style="color: #2bbbad!important;"></i>
-          <input type="name" id="LoginForm-username" formControlName="Username" class="form-control"
-                 mdbInput mdbValidate>
-          <label class="labelStyle" for="defaultForm-email">Usuário</label>
+            <i  class="fa fa-envelope prefix " style="color: #2bbbad!important;"></i>
+            <input type="name" id="LoginForm-username" formControlName="Username" class="form-control"
+                   mdbInput mdbValidate>
+            <label class="labelStyle" for="defaultForm-email">Usuário</label>
           </ds-input-container>
         </div>
 
         <div class="md-form ">
           <ds-input-container [showTip]="false">
-          <i style="font-size:20px!important;color: #2bbbad!important;" class="fa fa-lock prefix " ></i>
-          <input type="password" id="LoginForm-pass" formControlName="Password" class="form-control"
-                 mdbInput mdbValidate>
-          <label class="labelStyle" for="defaultForm-pass">Senha</label>
+            <i style="font-size:20px!important;color: #2bbbad!important;" class="fa fa-lock prefix " ></i>
+            <input type="password" id="LoginForm-pass" formControlName="Password" class="form-control"
+                   mdbInput mdbValidate>
+            <label class="labelStyle" for="defaultForm-pass">Senha</label>
           </ds-input-container>
         </div>
-
+       <p *ngIf="VerificationMessage" class="login-box-msg SubStyle" style="color:red!important">
+               Por favor, verifique seus dados!</p>
       </form>
       <div class="row modal-footer d-flex justify-content-center">
         <button class="col-xs-6 buttom" style="width:40%;" mdbBtn (click)="onLogin()"
-        color="default" class="waves-light" [disabled]="loginForm.invalid"  mdbWavesEffect>Login</button>
-        <button class="col-xs-6" style="width:50%;background-color:blue!important"
-            mdbBtn (click)="onLogin()" color="default" class="waves-light"
-                  mdbWavesEffect>Cadastre-se</button>
+        color="default" class="waves-light" [disabled]="loginForm.invalid"
+            mdbWavesEffect>Entre</button>
+        <button class="col-xs-6 buttom" style="width:40%;background-color:blue!important"
+            mdbBtn (click)="handleSignUp()" color="default" class="waves-light"
+            mdbWavesEffect>Cadastre-se</button>
       </div>
     </div>
   </div>

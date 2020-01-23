@@ -22,13 +22,14 @@ handleLogin(message:string){
       this.loginNotifier.emit(message);
   }
 
-handleSignUp(message:string){
-        const signUpService=this.injector.get(SignupService)
-        signUpService.notifiersignUp.emit("Diplay SignUp");
-    }
 
-onLogin(email:string,password:string){
+
+onLogin(username:string,password:string):Observable<any>{
+
         const cognitoAuthService=this.injector.get(CognitoAuthService)
-        cognitoAuthService.signUp(email,password)
+        return cognitoAuthService.onLogin(username,password)
+
+
+
     }
 }
