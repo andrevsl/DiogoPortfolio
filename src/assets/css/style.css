@@ -506,7 +506,7 @@ pre {
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px; }
-
+s
 .col {
   -ms-flex-preferred-size: 0;
   flex-basis: 0;
@@ -4416,7 +4416,7 @@ button.close {
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 0.3rem;
-  outline: 0; }
+   }
 
 .modal-backdrop {
   position: fixed;
@@ -4437,7 +4437,7 @@ button.close {
   display: flex;
   -webkit-box-align: start;
   -ms-flex-align: start;
-  align-items: flex-start;
+  align-items: center;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -7516,7 +7516,7 @@ header {
 .half .image4 {
     background-size: cover;
     background-position: center center;
-    
+
     height: 85vh;
     width:40%}
           @media (max-width: 991.98px) {
@@ -8431,6 +8431,8 @@ header {
   font-size:1.35rem;
   font-weight: bold;
   padding-top: 2rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
   }
       @media (max-width: 991.98px) {
         .textpa {
@@ -8466,6 +8468,8 @@ header {
 .text2{
   height:auto;
   width:50%;
+  padding-left: 3%;
+  padding-right:3%;
 }
 @media(max-width:991.98px){
   .text2{

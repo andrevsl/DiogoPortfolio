@@ -7,6 +7,7 @@ import { LoginService } from './login.service';
 import { SignupService } from '../signup/signup.service';
 import { Observable } from 'rxjs';
 import { NotificationService } from 'src/app/shared/ModalNotification/notification.service';
+import { CognitoAuthService } from '../cognitoauth/cognitoauth.service';
 
 @Component({
   selector: 'ds-login',
@@ -21,7 +22,8 @@ export class LoginComponent implements OnInit,AfterViewInit  {
   VerificationMessage:boolean=false
 
   constructor(private loginService:LoginService,
-              private injector:Injector) { }
+              private injector:Injector
+               ) { }
   showLogin:boolean=false
 
   @ViewChild('frame',{static:true}) frame: ModalDirective;
@@ -32,17 +34,25 @@ export class LoginComponent implements OnInit,AfterViewInit  {
     Password: new FormControl('', Validators.required)
   });
   //const loginService=this.injector.get(LoginService)
+
   this.loginService.loginNotifier.
                                 subscribe(message=>{this.showLogin=true;
-                                                   this.frame.show();
+                                                    this.frame.show();
                                                     console.log("Diplayed "+message)
                                                   })
+
+                                                  console.log(this.loginService.isLoggedIn())
+
   }
 
  ngAfterViewInit(){
     if(this.showLogin){
         this.frame.show()
         }
+        const authuser=this.injector.get(CognitoAuthService)
+        authuser.getAuthenticatedUser()
+
+      //  console.log(authuser)
  }
 
  onLogin(){
@@ -54,12 +64,14 @@ export class LoginComponent implements OnInit,AfterViewInit  {
                 this.frame.hide();
                 const notificationService=this.injector.get(NotificationService)
                 notificationService.notifier.emit({text:"Seja Bem vindo",name:username})
+                console.log(this.loginService.isLoggedIn())
+
                 },
                 (err)=>{
                 this.VerificationMessage = true;
               })
 
-              console.log(this.resp)
+              //console.log(this.resp)
 
   }
 

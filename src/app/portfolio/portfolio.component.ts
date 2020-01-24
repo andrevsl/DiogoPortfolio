@@ -9,7 +9,7 @@ import { NgbCarousel, NgbSlideEvent, NgbSlideEventSource,NgbCarouselConfig} from
 export class PortfolioComponent implements OnInit {
 
   constructor(config:NgbCarouselConfig) {
-    config.interval = 5000;
+    config.interval = 0;
     config.wrap = false;
     config.showNavigationIndicators=true;
     config.showNavigationArrows = true;

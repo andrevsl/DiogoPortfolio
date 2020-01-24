@@ -1,12 +1,12 @@
 .loginStyle{
   margin-left: auto!important;
   margin-right: auto!important;
-  color: #2bbbad;
+  color: #17a2b8;
   margin-bottom: 2px;
 }
 
 .labelStyle{
-  color: #2bbbad!important;
+  color: #17a2b8!important;
 
 }
 
@@ -19,5 +19,12 @@
 .row{
   margin-right: 0!important;;
   margin-left: 0!important;;
+}
+
+
+
+@media (min-width: 576px)  {
+
+
 
 }

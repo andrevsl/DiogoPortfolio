@@ -154,9 +154,13 @@ signUp(SignData:any):Observable<any>{
     return userPool.getCurrentUser();
   }
 
-  logOut() {
+  onLogOut() {
     this.getAuthenticatedUser().signOut();
     this.cognitoUser = null;
+    if(this.isLoggedIn()){
+     return true
+    }
+    return false
   }
 
 

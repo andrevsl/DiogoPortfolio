@@ -1,17 +1,21 @@
 .snackbar{
     width: 300px!important;
-    z-index:100!important;
+    z-index:1!important;
     text-align: center!important;
     border-radius: 2px!important;
     position: fixed!important;
     display: flex!important;
-    align-items: cente!importantr;
-    left: 50vh!important;
-    right: 50vh!important;
-
+    align-items: center!important;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;;
+    transform: translate(-50%, -20%);
 
 }
-
+.backgrounContent{
+  background-color:white; position: absolute;background: #2193b0!important;
+  background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0)!important;
+  background: linear-gradient(to right, #6dd5ed, #2193b0)!important;}
 
 .loginStyle{
   margin-left: auto!important;

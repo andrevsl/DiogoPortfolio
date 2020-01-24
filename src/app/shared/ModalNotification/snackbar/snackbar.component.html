@@ -1,12 +1,21 @@
-<!--<button  (click)="toggle()">Toggle </button> --->
+<!-- <div style="font-weiht:800;overflow:hidden;
+z-index:3000!important;bottom:50vh;min-width:100px;min-height:100px;
+background-color:white; position: absolute;background: #2193b0;
+background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);
+background: linear-gradient(to right, #6dd5ed, #2193b0);
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;;
+        transform: translate(-50%, -50%);">
+        <h2 style="color:red;text-align:center;"> Hi Guys</h2></div> -->
 
     <div class="snackbar modal-dialog"
-            role="document" [@snack-visibility]="snackVisibility">
-      <div class="modal-content " style=" align-content: center;">
-        <div class="row modal-header text-center" style="padding-bottom:0;">
+            role="document" [@snack-visibility]="snackVisibility" style="">
+      <div class="modal-content backgrounContent" style=" align-content: center;">
+        <div class=" modal-header text-center" style="padding-bottom:0;">
           <span class="login-logo  ">
-           <div *ngIf="!CodeView"><b style="font-weight:400;color:#17a2b8">{{text1}} {{name}}!</b></div>
-           <div *ngIf="CodeView" ><b style="font-weight:400;color:#17a2b8">Obrigado {{name}}!{{text1}}</b></div>
+           <div *ngIf="!CodeView"><b style="font-weight:400;color:white">{{text1}} {{name}}!</b></div>
+           <div *ngIf="CodeView" ><b style="font-weight:400;color:white">Obrigado {{name}}!{{text1}}</b></div>
           </span>
     <!--    <p class="login-box-msg SubStyle">Por favor, efetue o login para continuar!</p> -->
         </div>

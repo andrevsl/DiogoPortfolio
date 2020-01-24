@@ -76,7 +76,7 @@ export const firebaseConfig = {
     MDBBootstrapModule.forRoot(),
     AngularFireModule.initializeApp(firebaseConfig)
   ],
-  providers: [LoginService],
+  providers: [LoginService,HeaderComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

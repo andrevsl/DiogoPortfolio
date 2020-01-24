@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import {trigger,state,style,transition,animate} from '@angular/animations'
+import { Component, OnInit,ViewChild, AfterViewInit} from '@angular/core';
+import {trigger,state,style,transition,animate} from '@angular/animations';
+import { ModalDirective } from 'angular-bootstrap-md';
 import { NotificationService } from '../notification.service';
 import { tap,switchMap } from 'rxjs/operators';
 import { timer } from 'rxjs';
@@ -38,6 +39,7 @@ export class SnackbarComponent implements OnInit {
 
   constructor(private notificationService:NotificationService) { }
 
+
   ngOnInit() {
     this.codeForm=new FormGroup({
       verifycode: new FormControl('',[Validators.required])
@@ -50,6 +52,8 @@ export class SnackbarComponent implements OnInit {
                  this.snackVisibility='visible';}),
                switchMap(message=>timer(3000))
              ).subscribe(timer=>{this.snackVisibility='hidden'})
+
+             console.log('Oi')
   }
   checkflag(message){
     if(message.text!=="Code"){
@@ -58,15 +62,12 @@ export class SnackbarComponent implements OnInit {
     }
     else if(message.text==="Code"){
       this.CodeView=true
-      this.text1="Por favor, espere a confirmação Adminstrador";
+      this.text1="Por favor, espere a confirmação do Adminstrador";
       this.name=message.name;
     }
 
 
 
   }
-/*  toggle(){
-   this.snackVisibility=this.snackVisibility==='hidden' ? 'visible':'hidden'
- }*/
 
 }
