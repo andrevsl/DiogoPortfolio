@@ -146,7 +146,24 @@ signUp(SignData:any):Observable<any>{
     return userPool.getCurrentUser() != null;
   }
   getUserAttributes(){
+  const attributes=[]
+    if(this.cognitoUser!==null){
 
+        this.cognitoUser.getUserAttributes((err, result)=> {
+        	if (err) {
+        		alert(err.message || JSON.stringify(err));
+        		return;
+        	}
+          const rangeinterator=result.length
+        	// for (let i in rangeinterator) {
+          //   const attributes=[result[i].getName()]
+          //   attributes[result[i].getName()]=result[i].getValue()
+        	// 	console.log(attributes);
+        	// 		//'attribute ' + result[i].getName() + ' has value ' + result[i].getValue()
+          //
+        	// }
+        });
+    }
   }
 
   getAuthenticatedUser() {

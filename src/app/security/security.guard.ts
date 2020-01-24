@@ -17,11 +17,12 @@ constructor(private loginService:LoginService,
 
     checkAuthentication(path:string){
       const isLoggedIn=this.loginService.isLoggedIn()
+        // return true //Disable guard
          if(!isLoggedIn){
           this.loginService.handleLogin("Login")
-          console.log(isLoggedIn)
+        //  console.log(isLoggedIn)
          }
-         console.log(isLoggedIn)
+         //console.log(isLoggedIn)
          return isLoggedIn;
     }
 
@@ -32,7 +33,7 @@ constructor(private loginService:LoginService,
 
     canActivate(activatedRoute:ActivatedRouteSnapshot,
                 routerStateSnapshot:RouterStateSnapshot):boolean{
-      console.log('canActivate')
+      console.log(activatedRoute.routeConfig.path)
        return this.checkAuthentication(activatedRoute.routeConfig.path)
     }
 

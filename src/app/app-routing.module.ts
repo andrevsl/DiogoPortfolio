@@ -19,9 +19,10 @@ export const routes:Routes=[
   {path:'blogpcast',component:BlogpcastComponent},
   {path:'services',component:ServicesComponent},
   {path:'contacts',component:ContactsComponent},
-  {path:'portal',component:PortalComponent},
+  {path:'portal',component:PortalComponent,
+        canActivate:[SecurityGuard]},
   {path:'dataplatform',component: DataplatformComponent,
-        canLoad:[SecurityGuard]},
+        canActivate:[SecurityGuard]},
   {path:'login',component: LoginComponent}
 
 ]

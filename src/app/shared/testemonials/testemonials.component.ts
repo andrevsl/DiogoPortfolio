@@ -9,7 +9,7 @@ import { NgbCarouselConfig, NgbCarousel, NgbSlideEvent, NgbSlideEventSource  } f
 export class TestemonialsComponent implements OnInit {
 
   constructor(config:NgbCarouselConfig) {
-  config.interval = 2000;
+  config.interval = 3000;
   config.wrap = true;
   config.showNavigationIndicators=true;
   config.showNavigationArrows = false;

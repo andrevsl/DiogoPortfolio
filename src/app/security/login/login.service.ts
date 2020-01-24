@@ -12,14 +12,12 @@ export class LoginService {
 loginNotifier=new EventEmitter <string>()
 lastUrl:string;
 
-  constructor(private injector:Injector){
-      const router=this.injector.get(Router)
-      router.events.pipe(filter(e=> e instanceof NavigationEnd))
-                            .subscribe((e:NavigationEnd)=>this.lastUrl=e.url)
-  }
+  constructor(private injector:Injector,
+              private router:Router){}
 
-  handleLogin(message:string){
+  handleLogin(message:string, path?:string){
         this.loginNotifier.emit(message);
+
       }
 
 
@@ -30,11 +28,15 @@ lastUrl:string;
 
   isLoggedIn():boolean{
     const cognitoAuthService=this.injector.get(CognitoAuthService)
+
           return cognitoAuthService.isLoggedIn();
+
       }
 
   onLogout():boolean{
     const cognitoAuthService=this.injector.get(CognitoAuthService)
+        this.router.navigate(['/'])
+       //console.log(cognitoAuthService.getUserAttributes())
        return cognitoAuthService.onLogOut();
   }
 }

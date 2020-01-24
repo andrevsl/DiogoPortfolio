@@ -1,5 +1,6 @@
-<header role="banner">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<header role="banner" style="position: -webkit-fixed!important;
+position: fixed!important;">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark" >
       <div class="container-fluid">
         <a routerLinkactive="active" (click)="isChosenMenu()" [routerLink]="['']" class="navbar-brand">Diogo Souza</a>
         <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
