@@ -65,6 +65,7 @@ body {
   background-color: #fff;
   overflow:scroll;
   -webkit-overflow-scrolling: touch;
+
 }
 
 [tabindex="-1"]:focus {
@@ -7514,8 +7515,8 @@ header {
                         width: 100%} }
 
 .half .image4 {
-    background-size: cover;
-    background-position: center center;
+    background-size: contain!imporntant;
+    background-position: center center!imporntant;
 
     height: 85vh;
     width:40%}

@@ -8,7 +8,7 @@ phases:
         runtime-versions:
             nodejs: 12
         commands:
-            - npm install -y npm@latest
+            - npm install --build-from-source
             - npm install -g @angular/cli
             - rm package-lock.json
     pre_build:
