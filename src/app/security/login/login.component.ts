@@ -34,6 +34,7 @@ export class LoginComponent implements OnInit,AfterViewInit  {
                                               console.log('previous url', e[0].urlAfterRedirects);
                                               this.nextUrl=e[1].urlAfterRedirects;
                                               console.log('current url', e[1].urlAfterRedirects);
+                                          
                                             })
               }
 
@@ -80,7 +81,8 @@ export class LoginComponent implements OnInit,AfterViewInit  {
                 },
                 (err)=>{
                 this.VerificationMessage = true;
-                this.router.navigate(['/'])
+
+                //this.router.navigate(['/'])
               })
 
               //console.log(this.resp)

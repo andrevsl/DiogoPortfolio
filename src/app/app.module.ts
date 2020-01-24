@@ -7,7 +7,6 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { BlogpcastComponent } from './blogpcast/blogpcast.component';
-import { DataplatformComponent } from './dataplatform/dataplatform.component';
 import { SecurityComponent } from './security/security.component';
 import { FooterComponent } from './footer/footer.component';
 import { TestemonialsComponent } from './shared/testemonials/testemonials.component';
@@ -15,8 +14,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ServicesComponent } from './services/services.component';
 import { ContactsComponent } from './contacts/contacts.component';
-import { PortalComponent } from './portal/portal.component';
-import { CoursesComponent } from './portal/courses/courses.component';
+
 import { LoginComponent } from './security/login/login.component';
 import { FirebaseauthComponent } from './security/firebaseauth/firebaseauth.component';
 import { InputComponent } from './shared/input/input.component';
@@ -30,6 +28,9 @@ import { LoginService } from './security/login/login.service';
 import { SnackbarComponent } from './shared/ModalNotification/snackbar/snackbar.component';
 import { SignupComponent } from './security/signup/signup.component';
 import { AuthcodeComponent } from './security/authcode/authcode.component';
+import { DatavisionComponent } from './services/datavision/datavision.component';
+import { PortalComponent } from './services/portal/portal.component';
+import { CoursesComponent } from './services/portal/courses/courses.component';
 
 export const firebaseConfig = {
   apiKey: "----",
@@ -49,7 +50,7 @@ export const firebaseConfig = {
     AboutComponent,
     PortfolioComponent,
     BlogpcastComponent,
-    DataplatformComponent,
+    DatavisionComponent,
     SecurityComponent,
     FooterComponent,
     TestemonialsComponent,
@@ -64,7 +65,8 @@ export const firebaseConfig = {
     UserDetailComponent,
     SnackbarComponent,
     SignupComponent,
-    AuthcodeComponent
+    AuthcodeComponent,
+    DatavisionComponent
   ],
   imports: [
     BrowserModule,

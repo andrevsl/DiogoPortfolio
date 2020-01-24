@@ -1,6 +1,7 @@
 import { Component ,OnInit, AfterViewInit} from '@angular/core';
 import { Router, ActivatedRoute, Event, NavigationStart } from '@angular/router';
 import {Location} from '@angular/common'
+import { LoginService } from './security/login/login.service';
 
 @Component({
   selector: 'ds-root',
@@ -14,6 +15,7 @@ export class AppComponent implements OnInit {
 
   constructor(private router:Router,
               private location:Location,
+              private loginS:LoginService,
               private activatedRoute: ActivatedRoute){
                 //router.events.subscribe((url:any) => console.log([url['url']]));
                 //console.log(this.router.url)
@@ -24,7 +26,7 @@ export class AppComponent implements OnInit {
   ngOnInit(){
     this.router.events.subscribe( (e) => {
          if (e instanceof NavigationStart) {
-           if (e.url === "/dataplatform") {
+           if ((e.url === "/datavision")&&(this.loginS.isLoggedIn())) {
                console.log(e.url);
                this.dataRoute=true;
            } else {

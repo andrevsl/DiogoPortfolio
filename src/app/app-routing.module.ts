@@ -4,13 +4,13 @@ import {HomeComponent} from './home/home.component'
 import {AboutComponent} from './about/about.component'
 import {PortfolioComponent} from './portfolio/portfolio.component'
 import {BlogpcastComponent} from './blogpcast/blogpcast.component'
-import {DataplatformComponent} from './dataplatform/dataplatform.component'
 import {ServicesComponent} from './services/services.component'
 import {ContactsComponent} from './contacts/contacts.component'
-import { PortalComponent } from './portal/portal.component';
 import { LoginComponent } from './security/login/login.component';
 import {LocationStrategy,HashLocationStrategy } from '@angular/common'
 import { SecurityGuard } from './security/security.guard';
+import { PortalComponent } from './services/portal/portal.component';
+import { DatavisionComponent } from './services/datavision/datavision.component';
 
 export const routes:Routes=[
   {path:'',component:HomeComponent},
@@ -21,7 +21,7 @@ export const routes:Routes=[
   {path:'contacts',component:ContactsComponent},
   {path:'portal',component:PortalComponent,
         canActivate:[SecurityGuard]},
-  {path:'dataplatform',component: DataplatformComponent,
+  {path:'datavision',component: DatavisionComponent,
         canActivate:[SecurityGuard]},
   {path:'login',component: LoginComponent}
 

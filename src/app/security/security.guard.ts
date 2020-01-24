@@ -17,7 +17,7 @@ constructor(private loginService:LoginService,
 
     checkAuthentication(path:string){
       const isLoggedIn=this.loginService.isLoggedIn()
-        // return true //Disable guard
+         //return true //Disable guard
          if(!isLoggedIn){
           this.loginService.handleLogin("Login")
         //  console.log(isLoggedIn)

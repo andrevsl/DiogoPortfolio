@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DataplatformComponent } from './dataplatform.component';
+import { DatavisionComponent } from './datavision.component';
 
-describe('DataplatformComponent', () => {
-  let component: DataplatformComponent;
-  let fixture: ComponentFixture<DataplatformComponent>;
+describe('DatavisionComponent', () => {
+  let component: DatavisionComponent;
+  let fixture: ComponentFixture<DatavisionComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DataplatformComponent ]
+      declarations: [ DatavisionComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DataplatformComponent);
+    fixture = TestBed.createComponent(DatavisionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
