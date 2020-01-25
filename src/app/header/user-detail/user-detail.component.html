@@ -1,16 +1,17 @@
   <ul class=" navbar-nav">
     <li class="nav-item">
-    <span *ngIf="isLoggedIn();else notLoggedIn">
-        Olá, Diogo | <a class="nav-link" (click)="logout()"><i class="fa fa-user"></i> Sair</a>
-    </span>
+      <span *ngIf="isLoggedIn();else notLoggedIn">
+          Olá, Diogo | <a class="nav-link" (click)="logout()"><i class="fa fa-user"></i> Sair</a>
+      </span>
     </li>
 
-    <ng-template #notLoggedIn>
+     <span *ngIf="!isLoggedIn()">
       <li class="nav-item">
-        <div class="nav-link"><a (click)="handleLogin()" ><i class="fa fa-sign-in"></i>Entrar </a></div>
+          <a class="nav-link" (click)="handleLogin()" ><i class="fa fa-sign-in"></i>Entrar </a>
       </li>
       <li class="nav-item">
-        <div class="nav-link"><a (click)="handleSignUp()" ><i class="fa fa-hand-o-right"></i>Assine</a></div>
+        <a class="nav-link" (click)="handleSignUp()" ><i class="fa fa-hand-o-right"></i>Assine</a>
       </li>
-    </ng-template>
-    </ul>
+    </span>
+
+ </ul> 
