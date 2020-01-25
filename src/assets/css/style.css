@@ -7503,21 +7503,11 @@ header {
             height: 80vh;
             width: 100%} }
 
-.half .image3 {
-              background-size: contain;
-              background-repeat: no-repeat;
-              background-position: right center;
-              height: 85vh;
-              width:50%}
-                    @media (max-width: 991.98px) {
-                      .half .image3 {
-                        height: 80vh;
-                        width: 100%} }
 
 .half .image4 {
     background-size: contain!imporntant;
     background-position: center center!imporntant;
-
+    background-repeat: no-repeat!imporntant;
     height: 85vh;
     width:40%}
           @media (max-width: 991.98px) {
@@ -8431,7 +8421,7 @@ header {
   color:#FFF;
   font-size:1.35rem;
   font-weight: bold;
-  padding-top: 2rem;
+  padding-top: 1rem;
   padding-right: 2rem;
   padding-left: 2rem;
   }
@@ -8444,19 +8434,21 @@ header {
       } }
 
 .image1{
- background-size: cover;
- background-position: center center;
+ background-size: 100% 100%;
+ background-position: right center;
  background-repeat: no-repeat;
- height:100vh;
+ height:85vh;
  width:50%;
 }
     @media (max-width: 991.98px) {
       .image1 {
+          background-size: 100% 100%;
           width: 100%;
-          height: 60vh;
+          height: 80vh;
       } }
 
 .text1{
+  background-size: 100% 100%;
   height:auto;
   width:50%;
     }

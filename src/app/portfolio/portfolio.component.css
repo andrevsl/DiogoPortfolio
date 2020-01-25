@@ -1,0 +1,28 @@
+#image4{
+  background-position:center center!important;
+  background-size: 100% 100% !important;
+  background-repeat: no-repeat!important;
+  height: 85vh;
+  width:50%;
+
+}
+
+
+@media (max-width: 991.98px) {
+  #image4 {
+    background-size: auto auto;
+    height:70vh;
+    width: 100%;} }
+
+
+.half .image3 {
+  background-size: 90% 100% !important;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 85vh;
+  width:50%}
+        @media (max-width: 991.98px) {
+          .half .image3 {
+            background-size: 100% 100% !important;
+            height: 70vh;
+            width: 100%} }
