@@ -1,7 +1,8 @@
 import { Component ,OnInit, AfterViewInit} from '@angular/core';
-import { Router, ActivatedRoute, Event, NavigationStart } from '@angular/router';
+import { Router, ActivatedRoute, Event, NavigationStart, Scroll, NavigationEnd } from '@angular/router';
 import {Location} from '@angular/common'
 import { LoginService } from './security/login/login.service';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'ds-root',
@@ -17,9 +18,9 @@ export class AppComponent implements OnInit {
               private location:Location,
               private loginS:LoginService,
               private activatedRoute: ActivatedRoute){
-                //router.events.subscribe((url:any) => console.log([url['url']]));
-                //console.log(this.router.url)
-                 //console.log( this.activatedRoute.url.subscribe(url => console.log(url)))
+                router.events.pipe(
+      filter((e: Event) => e instanceof NavigationEnd))
+    .subscribe(e => { window.scrollTo(0, 0)});
 
   }
 

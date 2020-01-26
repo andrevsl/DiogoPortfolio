@@ -1,17 +1,19 @@
-  <ul class=" navbar-nav">
+  <ul class=" navbar-nav" style="flex-direction:row!important">
     <li class="nav-item">
-      <span *ngIf="isLoggedIn();else notLoggedIn">
-          Olá, Diogo | <a class="nav-link" (click)="logout()"><i class="fa fa-user"></i> Sair</a>
+      <span *ngIf="isLoggedIn()" >
+          Olá, {{getUsername()}} | <a class="nav-link" (click)="logout()"><i class="fa fa-user"></i> Sair</a>
       </span>
     </li>
 
-     <span *ngIf="!isLoggedIn()">
+     <span *ngIf="!isLoggedIn()" >
       <li class="nav-item">
-          <a class="nav-link" (click)="handleLogin()" ><i class="fa fa-sign-in"></i>Entrar </a>
+          <a class="nav-link userInfo" (click)="handleLogin()" id="userInfo">
+                  <i class="fa fa-sign-in"></i>Entrar </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" (click)="handleSignUp()" ><i class="fa fa-hand-o-right"></i>Assine</a>
+        <a class="nav-link userInfo" (click)="handleSignUp()" id="userInfo">
+                  <i class="fa fa-hand-o-right"></i>Assine</a>
       </li>
     </span>
 
- </ul> 
+ </ul>

@@ -20,9 +20,9 @@ constructor(private loginService:LoginService,
          //return true //Disable guard
          if(!isLoggedIn){
           this.loginService.handleLogin("Login")
-        //  console.log(isLoggedIn)
+         console.log("User is Logged: "+ isLoggedIn)
          }
-         //console.log(isLoggedIn)
+         console.log("User not Logged: "+ isLoggedIn)
          return isLoggedIn;
     }
 
@@ -33,7 +33,7 @@ constructor(private loginService:LoginService,
 
     canActivate(activatedRoute:ActivatedRouteSnapshot,
                 routerStateSnapshot:RouterStateSnapshot):boolean{
-      console.log(activatedRoute.routeConfig.path)
+      //console.log("Target Path of Guard:"+activatedRoute.routeConfig.path)
        return this.checkAuthentication(activatedRoute.routeConfig.path)
     }
 

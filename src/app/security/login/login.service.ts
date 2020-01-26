@@ -39,4 +39,10 @@ lastUrl:string;
        //console.log(cognitoAuthService.getUserAttributes())
        return cognitoAuthService.onLogOut();
   }
+
+  getAuthenticatedUser(){
+    const cognitoAuthService=this.injector.get(CognitoAuthService)
+
+          return cognitoAuthService.getAuthenticatedUser();
+  }
 }

@@ -1,0 +1,15 @@
+.textpa{
+  color:#FFF;
+  font-size:1.3rem;
+  font-weight: bold;
+  padding-top: 1rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  }
+      @media (max-width: 991.98px) {
+        .textpa {
+          font-size:1.02rem !important;
+          padding-top: 0.4rem;
+          padding-left:5%;
+          padding-right:5%;
+      } }

@@ -53,7 +53,7 @@ export class SnackbarComponent implements OnInit {
                switchMap(message=>timer(3000))
              ).subscribe(timer=>{this.snackVisibility='hidden'})
 
-             console.log('Oi')
+        
   }
   checkflag(message){
     if(message.text!=="Code"){

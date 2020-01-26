@@ -79,7 +79,7 @@ export class CognitoAuthService{
 
  }
 
-
+/// Subscrition by email
 signUp(SignData:any):Observable<any>{
     const attributeList=[]
 
@@ -122,7 +122,7 @@ signUp(SignData:any):Observable<any>{
       });
   }
 
-
+/// Code Authentication for new Users
   confirmAuthCode(code) {
     const user = {
       Username : this.cognitoUser.username,
@@ -142,26 +142,27 @@ signUp(SignData:any):Observable<any>{
     });
   }
 
-  isLoggedIn() {
-    return userPool.getCurrentUser() != null;
+  isLoggedIn():boolean {
+    return userPool.getCurrentUser() !== null;
   }
   getUserAttributes(){
   const attributes=[]
-    if(this.cognitoUser!==null){
 
+    if(this.cognitoUser!==null){
         this.cognitoUser.getUserAttributes((err, result)=> {
         	if (err) {
         		alert(err.message || JSON.stringify(err));
-        		return;
+
         	}
           const rangeinterator=result.length
+
         	// for (let i in rangeinterator) {
           //   const attributes=[result[i].getName()]
           //   attributes[result[i].getName()]=result[i].getValue()
-        	// 	console.log(attributes);
-        	// 		//'attribute ' + result[i].getName() + ' has value ' + result[i].getValue()
-          //
-        	// }
+          // 	console.log(attributes);
+        	// // 		//'attribute ' + result[i].getName() + ' has value ' + result[i].getValue()
+          // //
+        	//  }
         });
     }
   }

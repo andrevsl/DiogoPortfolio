@@ -30,11 +30,12 @@ export class LoginComponent implements OnInit,AfterViewInit  {
                 router.events.pipe(filter((e:any)=> e instanceof RoutesRecognized),pairwise())
                                       .subscribe((e:RoutesRecognized[])=>
                                             {
+
                                               this.prevUrl=e[0].urlAfterRedirects;
-                                              console.log('previous url', e[0].urlAfterRedirects);
+                                            //  console.log('previous url', e[0].urlAfterRedirects);
                                               this.nextUrl=e[1].urlAfterRedirects;
-                                              console.log('current url', e[1].urlAfterRedirects);
-                                          
+                                            //  console.log('current url', e[1].urlAfterRedirects);
+
                                             })
               }
 
@@ -74,7 +75,7 @@ export class LoginComponent implements OnInit,AfterViewInit  {
                 this.frame.hide();
                 const notificationService=this.injector.get(NotificationService)
                 notificationService.notifier.emit({text:"Seja Bem vindo",name:username})
-                console.log(this.loginService.isLoggedIn())
+                //console.log("Routing is allowed after Login")
                 //console.log("Prev: "+this.prevUrl)
                 //console.log("Next: "+this.nextUrl)
                 this.router.navigateByUrl(this.nextUrl)

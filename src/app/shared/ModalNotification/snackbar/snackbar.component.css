@@ -1,6 +1,6 @@
 .snackbar{
     width: 300px!important;
-    z-index:1!important;
+    z-index:10!important;
     text-align: center!important;
     border-radius: 2px!important;
     position: fixed!important;
