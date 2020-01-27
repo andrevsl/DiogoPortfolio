@@ -42,7 +42,6 @@ lastUrl:string;
 
   getAuthenticatedUser(){
     const cognitoAuthService=this.injector.get(CognitoAuthService)
-
           return cognitoAuthService.getAuthenticatedUser();
   }
 }

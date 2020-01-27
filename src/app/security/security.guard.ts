@@ -33,7 +33,7 @@ constructor(private loginService:LoginService,
 
     canActivate(activatedRoute:ActivatedRouteSnapshot,
                 routerStateSnapshot:RouterStateSnapshot):boolean{
-      //console.log("Target Path of Guard:"+activatedRoute.routeConfig.path)
+      //console.log("Target Path for Guarding:"+activatedRoute.routeConfig.path)
        return this.checkAuthentication(activatedRoute.routeConfig.path)
     }
 
