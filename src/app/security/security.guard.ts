@@ -47,7 +47,7 @@ constructor(private loginService:LoginService,
            if(isLoggedIn&&(username==='admin')){
            console.log("User is Logged: "+ isLoggedIn)
            return isLoggedIn;
-         }
+           }
         }
         this.loginService.handleLogin("Login")
     }
