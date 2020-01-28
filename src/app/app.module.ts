@@ -31,6 +31,7 @@ import { AuthcodeComponent } from './security/authcode/authcode.component';
 import { DatavisionComponent } from './services/datavision/datavision.component';
 import { PortalComponent } from './services/portal/portal.component';
 import { CoursesComponent } from './services/portal/courses/courses.component';
+import { MlComponent } from './services/datavision/ml/ml.component';
 
 export const firebaseConfig = {
   apiKey: "----",
@@ -66,7 +67,8 @@ export const firebaseConfig = {
     SnackbarComponent,
     SignupComponent,
     AuthcodeComponent,
-    DatavisionComponent
+    DatavisionComponent,
+    MlComponent
   ],
   imports: [
     BrowserModule,

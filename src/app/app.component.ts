@@ -36,8 +36,9 @@ export class AppComponent implements OnInit {
   ngOnInit(){
     this.router.events.subscribe( (e) => {
          if (e instanceof NavigationStart) {
-           if ((e.url === "/datavision")&&(this.loginS.isLoggedIn())) {
-               console.log(e.url);
+           if ((e.url === "/datavision")&&(this.loginS.isLoggedIn()
+         )&&(this.loginS.getAuthenticatedUser().getUsername()==='admin')) {
+               //console.log(this.loginS.getAuthenticatedUser().getUsername()==='admin');
                this.dataRoute=true;
            } else {
                //console.log(this.location.path());
