@@ -141,10 +141,11 @@ signUp(SignData:any):Observable<any>{
       });
     });
   }
-
+  /// -- Logging Status
   isLoggedIn():boolean {
     return userPool.getCurrentUser() !== null;
   }
+  /// -- Attributes not working
   getUserAttributes(){
   const attributes=[]
 
